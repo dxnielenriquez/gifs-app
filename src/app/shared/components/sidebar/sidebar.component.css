@@ -1,4 +1,81 @@
-#sidebar {
-  height: 100vh;
-  width: 250px;
+
+.example-container {
+  height: 500px;
+  border: 1px;
+}
+.example-sidenav-content {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.example-sidenav {
+   user-select: none;
+}
+.full-width {
+  width: 100%;
+}
+.menu-button {
+  transition: 300ms ease-in-out;
+  transform: rotate(0deg);
+}
+.menu-button.rotated {
+  transform: rotate(180deg);
+}
+.submenu {
+  overflow-y: hidden;
+  transition: transform 300ms ease;
+  transform: scaleY(0);
+  transform-origin: top;
+  padding-left: 30px;
+}
+
+/* Estilos CSS para reducir el espacio entre elementos del menú */
+.submenu {
+  max-height: 100px; /* Altura fija para el submenú */
+  overflow-y: auto; /* Agrega scroll si el contenido supera la altura máxima */
+  margin-top: 4px; /* Espacio superior entre submenús y elementos principales */
+  padding-left: 24px; /* Ajusta el espacio a la izquierda para los submenús */
+  position: absolute; /* Cambia a posición absoluta para superponerse */
+  background-color: #fff; /* Fondo blanco para los submenús */
+  z-index: 1; /* Asegura que los submenús estén por encima del contenido */
+}
+
+
+.parent {
+  margin-bottom: 4px; /* Margen inferior reducido para los elementos principales */
+  margin-top: 4px; /* Espacio superior entre elementos principales */
+  position: relative; /* Cambia a posición relativa para posicionar los submenús absolutos */
+}
+
+/* Estilo para el elemento activo */
+.mdc-list-item.mdc-list-item--with-one-line:active {
+  background-color: #e0e0e0; /* Cambia el color de fondo al hacer clic */
+  box-shadow: none; /* Elimina la sombra al hacer clic */
+  transition: background-color 0.3s ease; /* Agrega una transición suave al cambio de color de fondo */
+}
+
+.submenu.expanded {
+  transform: scaleY(1);
+}
+
+/* Estilos CSS para reducir el espacio entre elementos del menú */
+
+
+/* Estilos CSS para reducir el espacio entre elementos del menú */
+.submenu.expanded {
+  max-height: 500px; /* Altura máxima para el menú desplegable */
+  transition: max-height 0.3s ease; /* Agrega una transición suave al cambio de altura */
+}
+/* Estilos CSS para reducir el espacio entre elementos del menú */
+
+
+.submenu {
+  max-height: 100px;
+  overflow-y: inherit;
+  margin-top: 4px;
+  padding-left: 24px;
+  position: absolute;
+  background-color: #fff;
+  z-index: 1;
 }

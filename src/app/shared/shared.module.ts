@@ -2,6 +2,10 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { LazyImagesComponent } from './components/lazy-images/lazy-images.component';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatListModule} from '@angular/material/list';
+import {MatIconModule} from '@angular/material/icon';
 
 
 
@@ -11,7 +15,12 @@ import { LazyImagesComponent } from './components/lazy-images/lazy-images.compon
     LazyImagesComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+
+    MatToolbarModule,
+    MatSidenavModule,
+    MatListModule,
+    MatIconModule
   ],
   exports: [
     SidebarComponent,
