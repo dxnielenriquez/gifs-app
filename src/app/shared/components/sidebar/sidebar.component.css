@@ -1,6 +1,6 @@
 
 .example-container {
-  height: 500px;
+  height: 100vh;
   border: 1px;
 }
 .example-sidenav-content {
@@ -11,6 +11,8 @@
 }
 .example-sidenav {
    user-select: none;
+   background-color: #711b57;
+
 }
 .full-width {
   width: 100%;
@@ -78,4 +80,25 @@
   position: absolute;
   background-color: #fff;
   z-index: 1;
+}
+
+.mat-nav-list {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Alinea los elementos en la parte superior */
+  overflow-y: auto; /* Agrega scroll si el contenido supera la altura máxima */
+}
+
+.mat-drawer-content .mat-sidenav-content .ng-star-inserted {
+  width: 100%; /* Ocupa todo el ancho disponible */
+  margin-left: 200px; /* El margen izquierdo es igual al 100% de la altura de la ventana */
+}
+
+.mat-drawer-inner-container {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  background-color: #711b57;
 }
