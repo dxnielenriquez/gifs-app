@@ -50,6 +50,8 @@
   position: relative; /* Cambia a posición relativa para posicionar los submenús absolutos */
 }
 
+
+
 /* Estilo para el elemento activo */
 .mdc-list-item.mdc-list-item--with-one-line:active {
   background-color: #e0e0e0; /* Cambia el color de fondo al hacer clic */
@@ -61,7 +63,6 @@
   transform: scaleY(1);
 }
 
-/* Estilos CSS para reducir el espacio entre elementos del menú */
 
 
 /* Estilos CSS para reducir el espacio entre elementos del menú */
@@ -90,6 +91,7 @@
   overflow-y: auto; /* Agrega scroll si el contenido supera la altura máxima */
 }
 
+
 .mat-drawer-content .mat-sidenav-content .ng-star-inserted {
   width: 100%; /* Ocupa todo el ancho disponible */
   margin-left: 200px; /* El margen izquierdo es igual al 100% de la altura de la ventana */
@@ -102,3 +104,54 @@
   -webkit-overflow-scrolling: touch;
   background-color: #711b57;
 }
+
+/* Cambiar el color del texto y los iconos a blanco */
+.mat-icon  {
+  color: white;
+}
+
+.mat-list-item-content{
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+
+
+.mat-list-item-content .mat-icon{
+  margin-right: 10px;
+}
+
+.mat-list-item-content,
+.mat-list-item,
+.mat-list-text,
+.full-width {
+  color: white !important;
+}
+
+/* Cambiar la tipografía a Rockwell y establecer el tamaño de fuente */
+.mat-list-item-content,
+.mat-list-item,
+.mat-list-text,
+.full-width {
+  font-family: 'Rockwell', sans-serif;
+  font-size: 13px;
+}
+
+.white-text {
+  color: white !important;
+  font-family: 'Rockwell', sans-serif;
+  font-size: 13px;
+}
+
+
+/* Cambiar el color de fondo del menú */
+.mat-nav-list, .submenu {
+  background-color: #711b57;
+}
+
+
+
+

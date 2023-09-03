@@ -7,154 +7,155 @@
       <!-- Menú 1 - Home -->
       <!-- Nuevo elemento de menú similar al de "Home" -->
       <mat-list-item (click)="showNewMenuItem = !showNewMenuItem" class="parent">
-        <span class="full-width" *ngIf="isExpanded || isShowing">Dashboard</span>
+        <span  class="full-width colorletra" *ngIf="isExpanded || isShowing">Dashboard</span>
         <mat-icon mat-list-icon>dashboard</mat-icon>
         <mat-icon class="menu-button" [ngClass]="{'rotated' : showNewMenuItem}" *ngIf="isExpanded || isShowing"></mat-icon>
       </mat-list-item>
 
       <mat-list-item (click)="showSubmenu3 = !showSubmenu3" class="parent">
-        <span class="full-width" *ngIf="isExpanded || isShowing">Administracíon</span>
+        <span class="full-width colorletra" *ngIf="isExpanded || isShowing">Administracíon</span>
         <mat-icon mat-list-icon>settings</mat-icon>
         <mat-icon class="menu-button" [ngClass]="{'rotated' : showSubmenu3}" *ngIf="isExpanded || isShowing">expand_more</mat-icon>
       </mat-list-item>
-      <div class="submenu" [ngClass]="{'expanded' : showSubmenu3}" *ngIf="isShowing || isExpanded">
-        <a mat-list-item href="#">Usuarios</a>
-        <a mat-list-item href="#">Tipos de usuarios</a>
-        <a mat-list-item href="#">Centros de captura</a>
-        <a mat-list-item href="#">Casillas</a>
-        <a mat-list-item href="#">Partidos</a>
-        <a mat-list-item href="#">Candidatos</a>
-        <a mat-list-item href="#">Párámetros</a>
-        <a mat-list-item href="#">Relación de usuarios PREP Casilla</a>
+      <div style="background-color: #711b57;"  class="submenu  " [ngClass]="{'expanded' : showSubmenu3}" *ngIf="isShowing || isExpanded">
+        <a mat-list-item  href="#"><span class="white-text">Usuarios</span></a>
+        <a mat-list-item href="#"><span class="white-text">Tipos de usuarios</span></a>
+        <a mat-list-item href="#"><span class="white-text">Centros de captura</span></a>
+        <a mat-list-item href="#"><span class="white-text">Casillas</span></a>
+        <a mat-list-item href="#"><span class="white-text">Partidos</span></a>
+        <a mat-list-item href="#"><span class="white-text">Candidatos</span></a>
+        <a mat-list-item href="#"><span class="white-text">Párámetros</span></a>
+        <a mat-list-item href="#"><span class="white-text">Relación de usuarios PREP Casilla</span></a>
         <mat-list-item (click)="showSubSubMenu = !showSubSubMenu" class="parent">
           <mat-icon class="menu-button" [ngClass]="{'rotated' : showSubSubMenu}" *ngIf="isExpanded || isShowing"></mat-icon>
         </mat-list-item>
       </div>
-      <mat-list-item (click)="showSubmenu4 = !showSubmenu4" class="parent">
-        <span class="full-width" *ngIf="isExpanded || isShowing">Reportes</span>
-        <mat-icon mat-list-icon>assessment</mat-icon>
-        <mat-icon class="menu-button" [ngClass]="{'rotated' : showSubmenu4}" *ngIf="isExpanded || isShowing">expand_more</mat-icon>
-      </mat-list-item>
-      <div class="submenu" [ngClass]="{'expanded' : showSubmenu4}" *ngIf="isShowing || isExpanded">
 
-        <mat-list-item (click)="showSubSubMenuSimulacros = !showSubSubMenuSimulacros" class="parent">
+      <mat-list-item  (click)="showSubmenu4 = !showSubmenu4" class="parent">
+        <span  class="full-width colorletra" *ngIf="isExpanded || isShowing">Reportes</span>
+        <mat-icon mat-list-icon>assessment</mat-icon>
+        <mat-icon class="menu-button"  [ngClass]="{'rotated' : showSubmenu4}" *ngIf="isExpanded || isShowing">expand_more</mat-icon>
+      </mat-list-item>
+      <div style="background-color: #711b57;" class="submenu" [ngClass]="{'expanded' : showSubmenu4}" *ngIf="isShowing || isExpanded">
+
+        <mat-list-item  (click)="showSubSubMenuSimulacros = !showSubSubMenuSimulacros" class="parent">
           <span class="full-width" *ngIf="isExpanded || isShowing">Simulacro</span>
           <mat-icon class="menu-button" [ngClass]="{'rotated' : showSubSubMenuSimulacros}" *ngIf="isExpanded || isShowing">expand_more</mat-icon>
         </mat-list-item>
-        <div class="submenu" [ngClass]="{'expanded' : showSubSubMenuSimulacros}" *ngIf="isShowing || isExpanded">
-          <a mat-list-item>Simulacros generados</a>
-          <a mat-list-item>Generar simulacro</a>
-          <a href="#" mat-list-item>Generar simulacro</a>
-          <a mat-list-item>Generar simulacro</a>
-          <a mat-list-item>Generar simulacro</a>
-          <a mat-list-item>Generar simulacro</a>
-          <a mat-list-item>Generar simulacro</a>
-          <a mat-list-item>Generar simulacro</a>
+        <div class="submenu" style="background-color: #711b57;" [ngClass]="{'expanded' : showSubSubMenuSimulacros}" *ngIf="isShowing || isExpanded">
+          <a mat-list-item><span class="white-text">Simulacros generados</span></a>
+          <a mat-list-item><span class="white-text">Generar simulacro</span></a>
+          <a href="#" mat-list-item><span class="white-text">Generar simulacro</span></a>
+          <a mat-list-item><span class="white-text">Generar simulacro</span></a>
+          <a mat-list-item><span class="white-text">Generar simulacro</span></a>
+          <a mat-list-item><span class="white-text">Generar simulacro</span></a>
+          <a mat-list-item><span class="white-text">Generar simulacro</span></a>
+          <a mat-list-item><span class="white-text">Generar simulacro</span></a>
         </div>
 
-        <mat-list-item (click)="showSubSubMenuCentral = !showSubSubMenuCentral" class="parent">
-          <span class="full-width" *ngIf="isExpanded || isShowing">Central</span>
-          <mat-icon class="menu-button" [ngClass]="{'rotated' : showSubSubMenuCentral}" *ngIf="isExpanded || isShowing">expand_more</mat-icon>
+        <mat-list-item  (click)="showSubSubMenuCentral = !showSubSubMenuCentral" class="parent">
+          <span  class="full-width" *ngIf="isExpanded || isShowing">Central</span>
+          <mat-icon  class="menu-button" [ngClass]="{'rotated' : showSubSubMenuCentral}" *ngIf="isExpanded || isShowing">expand_more</mat-icon>
         </mat-list-item>
-        <div class="submenu" [ngClass]="{'expanded' : showSubSubMenuCentral}" *ngIf="isShowing || isExpanded">
-          <a mat-list-item>Simulacros generados</a>
-          <a mat-list-item>Generar simulacro</a>
-          <a href="#" mat-list-item>Generar simulacro</a>
-          <a mat-list-item>Generar simulacro</a>
-          <a mat-list-item>Generar simulacro</a>
-          <a mat-list-item>Generar simulacro</a>
-          <a mat-list-item>Generar simulacro</a>
-          <a mat-list-item>Generar simulacro</a>
+        <div style="background-color: #711b57;" class="submenu" [ngClass]="{'expanded' : showSubSubMenuCentral}" *ngIf="isShowing || isExpanded">
+          <a mat-list-item><span class="white-text">Simulacros generados</span></a>
+          <a mat-list-item><span class="white-text">Generar simulacro</span></a>
+          <a href="#" mat-list-item><span class="white-text">Generar simulacro</span></a>
+          <a mat-list-item><span class="white-text">Generar simulacro</span></a>
+          <a mat-list-item><span class="white-text">Generar simulacro</span></a>
+          <a mat-list-item><span class="white-text">Generar simulacro</span></a>
+          <a mat-list-item><span class="white-text">Generar simulacro</span></a>
+          <a mat-list-item><span class="white-text">Generar simulacro</span></a>
         </div>
 
         <mat-list-item (click)="showSubSubMenuJornada = !showSubSubMenuJornada" class="parent">
           <span class="full-width" *ngIf="isExpanded || isShowing">Jornada electoral</span>
           <mat-icon class="menu-button" [ngClass]="{'rotated' : showSubSubMenuJornada}" *ngIf="isExpanded || isShowing">expand_more</mat-icon>
         </mat-list-item>
-        <div class="submenu" [ngClass]="{'expanded' : showSubSubMenuJornada}" *ngIf="isShowing || isExpanded">
-          <a mat-list-item>Simulacros generados</a>
-          <a mat-list-item>Generar simulacro</a>
-          <a href="#" mat-list-item>Generar simulacro</a>
-          <a mat-list-item>Generar simulacro</a>
-          <a mat-list-item>Generar simulacro</a>
-          <a mat-list-item>Generar simulacro</a>
-          <a mat-list-item>Generar simulacro</a>
-          <a mat-list-item>Generar simulacro</a>
+        <div style="background-color: #711b57;" class="submenu" [ngClass]="{'expanded' : showSubSubMenuJornada}" *ngIf="isShowing || isExpanded">
+          <a mat-list-item><span class="white-text">Simulacros generados</span></a>
+          <a mat-list-item><span class="white-text">Generar simulacro</span></a>
+          <a href="#" mat-list-item><span class="white-text">Generar simulacro</span></a>
+          <a mat-list-item><span class="white-text">Generar simulacro</span></a>
+          <a mat-list-item><span class="white-text">Generar simulacro</span></a>
+          <a mat-list-item><span class="white-text">Generar simulacro</span></a>
+          <a mat-list-item><span class="white-text">Generar simulacro</span></a>
+          <a mat-list-item><span class="white-text">Generar simulacro</span></a>
         </div>
 
         <mat-list-item (click)="showSubSubMenuInforme = !showSubSubMenuInforme" class="parent">
           <span class="full-width" *ngIf="isExpanded || isShowing">Informe de actividades</span>
           <mat-icon class="menu-button" [ngClass]="{'rotated' : showSubSubMenuInforme}" *ngIf="isExpanded || isShowing">expand_more</mat-icon>
         </mat-list-item>
-        <div class="submenu" [ngClass]="{'expanded' : showSubSubMenuInforme}" *ngIf="isShowing || isExpanded">
-          <a mat-list-item>Simulacros generados</a>
-          <a mat-list-item>Generar simulacro</a>
-          <a href="#" mat-list-item>Generar simulacro</a>
-          <a mat-list-item>Generar simulacro</a>
-          <a mat-list-item>Generar simulacro</a>
-          <a mat-list-item>Generar simulacro</a>
-          <a mat-list-item>Generar simulacro</a>
-          <a mat-list-item>Generar simulacro</a>
+        <div style="background-color: #711b57;" class="submenu" [ngClass]="{'expanded' : showSubSubMenuInforme}" *ngIf="isShowing || isExpanded">
+          <a mat-list-item><span class="white-text">Simulacros generados</span></a>
+          <a mat-list-item><span class="white-text">Generar simulacro</span></a>
+          <a href="#" mat-list-item><span class="white-text">Generar simulacro</span></a>
+          <a mat-list-item><span class="white-text">Generar simulacro</span></a>
+          <a mat-list-item><span class="white-text">Generar simulacro</span></a>
+          <a mat-list-item><span class="white-text">Generar simulacro</span></a>
+          <a mat-list-item><span class="white-text">Generar simulacro</span></a>
+          <a mat-list-item><span class="white-text">Generar simulacro</span></a>
         </div>
 
         <mat-list-item (click)="showSubSubMenuPartidos = !showSubSubMenuPartidos" class="parent">
           <span class="full-width" *ngIf="isExpanded || isShowing">Partidos</span>
           <mat-icon class="menu-button" [ngClass]="{'rotated' : showSubSubMenuPartidos}" *ngIf="isExpanded || isShowing">expand_more</mat-icon>
         </mat-list-item>
-        <div class="submenu" [ngClass]="{'expanded' : showSubSubMenuPartidos}" *ngIf="isShowing || isExpanded">
-          <a mat-list-item>Simulacros generados</a>
-          <a mat-list-item>Generar simulacro</a>
-          <a href="#" mat-list-item>Generar simulacro</a>
-          <a mat-list-item>Generar simulacro</a>
-          <a mat-list-item>Generar simulacro</a>
-          <a mat-list-item>Generar simulacro</a>
-          <a mat-list-item>Generar simulacro</a>
-          <a mat-list-item>Generar simulacro</a>
+        <div style="background-color: #711b57;" class="submenu" [ngClass]="{'expanded' : showSubSubMenuPartidos}" *ngIf="isShowing || isExpanded">
+          <a mat-list-item><span class="white-text">Simulacros generados</span></a>
+          <a mat-list-item><span class="white-text">Generar simulacro</span></a>
+          <a href="#" mat-list-item><span class="white-text">Generar simulacro</span></a>
+          <a mat-list-item><span class="white-text">Generar simulacro</span></a>
+          <a mat-list-item><span class="white-text">Generar simulacro</span></a>
+          <a mat-list-item><span class="white-text">Generar simulacro</span></a>
+          <a mat-list-item><span class="white-text">Generar simulacro</span></a>
+          <a mat-list-item><span class="white-text">Generar simulacro</span></a>
         </div>
 
         <mat-list-item (click)="showSubSubMenuCandidatos = !showSubSubMenuCandidatos" class="parent">
           <span class="full-width" *ngIf="isExpanded || isShowing">Candidatos</span>
           <mat-icon class="menu-button" [ngClass]="{'rotated' : showSubSubMenuCandidatos}" *ngIf="isExpanded || isShowing">expand_more</mat-icon>
         </mat-list-item>
-        <div class="submenu" [ngClass]="{'expanded' : showSubSubMenuCandidatos}" *ngIf="isShowing || isExpanded">
-          <a mat-list-item>Simulacros generados</a>
-          <a mat-list-item>Generar simulacro</a>
-          <a href="#" mat-list-item>Generar simulacro</a>
-          <a mat-list-item>Generar simulacro</a>
-          <a mat-list-item>Generar simulacro</a>
-          <a mat-list-item>Generar simulacro</a>
-          <a mat-list-item>Generar simulacro</a>
-          <a mat-list-item>Generar simulacro</a>
+        <div style="background-color: #711b57;" class="submenu" [ngClass]="{'expanded' : showSubSubMenuCandidatos}" *ngIf="isShowing || isExpanded">
+          <a mat-list-item><span class="white-text">Simulacros generados</span></a>
+          <a mat-list-item><span class="white-text">Generar simulacro</span></a>
+          <a href="#" mat-list-item><span class="white-text">Generar simulacro</span></a>
+          <a mat-list-item><span class="white-text">Generar simulacro</span></a>
+          <a mat-list-item><span class="white-text">Generar simulacro</span></a>
+          <a mat-list-item><span class="white-text">Generar simulacro</span></a>
+          <a mat-list-item><span class="white-text">Generar simulacro</span></a>
+          <a mat-list-item><span class="white-text">Generar simulacro</span></a>
         </div>
 
         <mat-list-item (click)="showSubSubMenuParametros = !showSubSubMenuParametros" class="parent">
           <span class="full-width" *ngIf="isExpanded || isShowing">Parametros</span>
           <mat-icon class="menu-button" [ngClass]="{'rotated' : showSubSubMenuParametros}" *ngIf="isExpanded || isShowing">expand_more</mat-icon>
         </mat-list-item>
-        <div class="submenu" [ngClass]="{'expanded' : showSubSubMenuParametros}" *ngIf="isShowing || isExpanded">
-          <a mat-list-item>Simulacros generados</a>
-          <a mat-list-item>Generar simulacro</a>
-          <a href="#" mat-list-item>Generar simulacro</a>
-          <a mat-list-item>Generar simulacro</a>
-          <a mat-list-item>Generar simulacro</a>
-          <a mat-list-item>Generar simulacro</a>
-          <a mat-list-item>Generar simulacro</a>
-          <a mat-list-item>Generar simulacro</a>
+        <div style="background-color: #711b57;" class="submenu" [ngClass]="{'expanded' : showSubSubMenuParametros}" *ngIf="isShowing || isExpanded">
+          <a mat-list-item><span class="white-text">Simulacros generados</span></a>
+          <a mat-list-item><span class="white-text">Generar simulacro</span></a>
+          <a href="#" mat-list-item><span class="white-text">Generar simulacro</span></a>
+          <a mat-list-item><span class="white-text">Generar simulacro</span></a>
+          <a mat-list-item><span class="white-text">Generar simulacro</span></a>
+          <a mat-list-item><span class="white-text">Generar simulacro</span></a>
+          <a mat-list-item><span class="white-text">Generar simulacro</span></a>
+          <a mat-list-item><span class="white-text">Generar simulacro</span></a>
         </div>
 
         <mat-list-item (click)="showSubSubMenuPrep = !showSubSubMenuPrep" class="parent">
           <span class="full-width" *ngIf="isExpanded || isShowing">Relacion usuarios PREP casilla</span>
           <mat-icon class="menu-button" [ngClass]="{'rotated' : showSubSubMenuPrep}" *ngIf="isExpanded || isShowing">expand_more</mat-icon>
         </mat-list-item>
-        <div class="submenu" [ngClass]="{'expanded' : showSubSubMenuPrep}" *ngIf="isShowing || isExpanded">
-          <a mat-list-item>Simulacros generados</a>
-          <a mat-list-item>Generar simulacro</a>
-          <a href="#" mat-list-item>Generar simulacro</a>
-          <a mat-list-item>Generar simulacro</a>
-          <a mat-list-item>Generar simulacro</a>
-          <a mat-list-item>Generar simulacro</a>
-          <a mat-list-item>Generar simulacro</a>
-          <a mat-list-item>Generar simulacro</a>
+        <div style="background-color: #711b57;" class="submenu" [ngClass]="{'expanded' : showSubSubMenuPrep}" *ngIf="isShowing || isExpanded">
+          <a mat-list-item><span class="white-text">Simulacros generados</span></a>
+          <a mat-list-item><span class="white-text">Generar simulacro</span></a>
+          <a href="#" mat-list-item><span class="white-text">Generar simulacro</span></a>
+          <a mat-list-item><span class="white-text">Generar simulacro</span></a>
+          <a mat-list-item><span class="white-text">Generar simulacro</span></a>
+          <a mat-list-item><span class="white-text">Generar simulacro</span></a>
+          <a mat-list-item><span class="white-text">Generar simulacro</span></a>
+          <a mat-list-item><span class="white-text">Generar simulacro</span></a>
         </div>
       </div>
 
@@ -169,10 +170,10 @@
         <mat-icon mat-list-icon>receipt</mat-icon>
         <mat-icon class="menu-button" [ngClass]="{'rotated' : showSubSubMenuSimulacros2}" *ngIf="isExpanded || isShowing">expand_more</mat-icon>
       </mat-list-item>
-      <div class="submenu" [ngClass]="{'expanded' : showSubSubMenuSimulacros2}" *ngIf="isShowing || isExpanded">
-        <a mat-list-item href="#">Simulacros generados</a>
-        <a mat-list-item href="#">Generar simulacro</a>
-        <a mat-list-item href="#">Generar contraseña</a>
+      <div style="background-color: #711b57;" class="submenu" [ngClass]="{'expanded' : showSubSubMenuSimulacros2}" *ngIf="isShowing || isExpanded">
+        <a mat-list-item href="#"><span class="white-text">Simulacros generados</span></a>
+        <a mat-list-item href="#"><span class="white-text">Generar simulacro</span></a>
+        <a mat-list-item href="#"><span class="white-text">Generar contraseña</span></a>
         <mat-list-item (click)="showSubSubMenuSimulacros2 = !showSubSubMenuSimulacros2" class="parent">
           <mat-icon class="menu-button" [ngClass]="{'rotated' : showSubSubMenuSimulacros2}" *ngIf="isExpanded || isShowing"></mat-icon>
         </mat-list-item>
@@ -183,9 +184,9 @@
         <mat-icon mat-list-icon>data_usage</mat-icon>
         <mat-icon class="menu-button" [ngClass]="{'rotated' : showSubSubMenudatabase}" *ngIf="isExpanded || isShowing">expand_more</mat-icon>
       </mat-list-item>
-      <div class="submenu" [ngClass]="{'expanded' : showSubSubMenudatabase}" *ngIf="isShowing || isExpanded">
-        <a mat-list-item href="#">Limpiar</a>
-        <a mat-list-item href="#">Bitacora</a>
+      <div style="background-color: #711b57;" class="submenu" [ngClass]="{'expanded' : showSubSubMenudatabase}" *ngIf="isShowing || isExpanded">
+        <a mat-list-item href="#"><span class="white-text">Limpiar</span></a>
+        <a mat-list-item href="#"><span class="white-text">Bitacora</span></a>
         <mat-list-item (click)="showSubSubMenudatabase = !showSubSubMenudatabase" class="parent">
           <mat-icon class="menu-button" [ngClass]="{'rotated' : showSubSubMenudatabase}" *ngIf="isExpanded || isShowing"></mat-icon>
         </mat-list-item>
@@ -196,8 +197,8 @@
         <mat-icon mat-list-icon>unarchive</mat-icon>
         <mat-icon class="menu-button" [ngClass]="{'rotated' : showSubSubMenuCotejo}" *ngIf="isExpanded || isShowing">expand_more</mat-icon>
       </mat-list-item>
-      <div class="submenu" [ngClass]="{'expanded' : showSubSubMenuCotejo}" *ngIf="isShowing || isExpanded">
-        <a mat-list-item href="#">Solicitud de baja de actas</a>
+      <div style="background-color: #711b57;" class="submenu" [ngClass]="{'expanded' : showSubSubMenuCotejo}" *ngIf="isShowing || isExpanded">
+        <a  mat-list-item href="#"><span class="white-text">Solicitud de baja de actas</span></a>
         <mat-list-item (click)="showSubSubMenuCotejo = !showSubSubMenuCotejo" class="parent">
           <mat-icon class="menu-button" [ngClass]="{'rotated' : showSubSubMenuCotejo}" *ngIf="isExpanded || isShowing"></mat-icon>
         </mat-list-item>

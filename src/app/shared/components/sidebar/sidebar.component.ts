@@ -24,7 +24,7 @@ export class SidebarComponent {
   //   this.gifsService.searchTag(tag);
   // }
   @ViewChild('sidenav') sidenav: MatSidenav | undefined;
-  isExpanded = false;
+  isExpanded = true;
   showSubmenu: boolean = false;
   isShowing = false;
   opened:  boolean = false;
