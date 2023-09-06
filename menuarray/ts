@@ -1,0 +1,129 @@
+import { Component, ViewEncapsulation, ViewChild } from '@angular/core';
+
+export interface MenuItem {
+  label: string;
+  icon: string;
+  expanded: boolean;
+  subItems?: MenuItem[];
+  subSubItems?: MenuItem[]; // Segundo nivel de submenú
+
+}
+
+@Component({
+  selector: 'app-layout',
+  templateUrl: './layout.component.html',
+  styleUrls: ['./layout.component.css'],
+  encapsulation: ViewEncapsulation.None
+})
+export class LayoutComponent  {
+
+  isExpanded = false;
+  showSubmenu: boolean = false;
+  isShowing = false;
+  opened:  boolean = false;
+  reportesExpanded = false; // Variable para rastrear la expansión de "Reportes"
+  simulacroExpanded = false; 
+
+  
+  toggleMenuItem(item: MenuItem) {
+    item.expanded = !item.expanded;
+  }
+
+  mouseenter() {
+    if (!this.isExpanded) {
+      this.isShowing = true;
+    }
+  }
+  mouseleave() {
+    if (!this.isExpanded) {
+      this.isShowing = false;
+    }
+  }
+
+ menuItems: MenuItem[] = [
+  {
+    label: 'Dashboard',
+    icon: 'dashboard',
+    expanded: false,
+  },
+  {
+    label: 'Administración',
+    icon: 'settings',
+    expanded: false,
+    subItems: [
+      { label: 'Usuarios', icon: 'person', expanded: false },
+      { label: 'Tipos de usuarios', icon: 'group', expanded: false },
+      { label: 'Centros de captura', icon: 'group', expanded: false },
+      { label: 'Casillas', icon: 'group', expanded: false },
+      { label: 'Partidos', icon: 'group', expanded: false },
+      { label: 'Candidatos', icon: 'group', expanded: false },
+      { label: 'Parámetros', icon: 'group', expanded: false },
+      { label: 'Relación usuarios PREP Casilla', icon: 'group', expanded: false },
+
+    ],
+  },
+  {
+    label: 'Reportes',
+    icon: 'assessment',
+    expanded: false,
+    subItems: [
+      {
+        label: 'Simulacro',
+        icon: 'receipt',
+        expanded: false,
+        subSubItems: [
+          { 
+            label: 'Resultados generados',
+            icon: 'list',
+            expanded: false,
+            subItems: [
+            ],
+          },
+        ],
+      },
+      {
+        label: 'Central',
+        icon: 'store',
+        expanded: false,
+        subItems: [
+          { label: 'Casillas', icon: 'store', expanded: false },
+          { label: 'Evaluación de simulacro', icon: 'assessment', expanded: false },
+        ],
+      },
+    ],
+  },
+  {
+    label: 'Reportes bitácora de acopio',
+    icon: 'dashboard',
+    expanded: false,
+  },
+  {
+    label: 'Simulacros',
+    icon: 'settings',
+    expanded: false,
+    subItems: [
+      { label: 'Simulacros generados', icon: 'person', expanded: false },
+      { label: 'Generar simulacro', icon: 'group', expanded: false },
+      { label: 'Generar contraseña', icon: 'group', expanded: false },
+    ],
+  },
+
+  {
+    label: 'Base de datos',
+    icon: 'settings',
+    expanded: false,
+    subItems: [
+      { label: 'Limpiar', icon: 'person', expanded: false },
+      { label: 'Bitácora', icon: 'group', expanded: false },
+    ],
+  },
+  {
+    label: 'Cotejo',
+    icon: 'settings',
+    expanded: false,
+    subItems: [
+      { label: 'Solicitud baja de actas', icon: 'person', expanded: false },
+    ],
+  },
+];
+}

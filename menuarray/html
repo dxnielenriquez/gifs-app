@@ -1,0 +1,43 @@
+<app-header></app-header>
+<main>
+  <div style=" background-color: #711b57; ">
+    <mat-sidenav-container class="example-container" autosize>
+      <mat-sidenav #sidenav class="example-sidenav" mode="side" opened="true" (mouseenter)="mouseenter()" (mouseleave)="mouseleave()">
+        <mat-nav-list class="mat-nav-list">
+          <ng-container *ngFor="let menuItem of menuItems; let first = first">
+            <mat-list-item (click)="toggleMenuItem(menuItem)" class="parent">
+              <div class="menu-item-container">
+                <mat-icon mat-list-icon>{{ menuItem.icon }}</mat-icon>
+                <span class="full-width colorletra" *ngIf="isExpanded || isShowing">{{ menuItem.label }}</span>
+                <mat-icon class="menu-button" [ngClass]="{'rotated' : menuItem.expanded && !first}" *ngIf="isExpanded || isShowing">
+                  expand_more
+                </mat-icon>
+              </div>
+            </mat-list-item>
+            <div style="background-color: #711b57;" class="submenu" [ngClass]="{'expanded' : menuItem.expanded}" *ngIf="isShowing || isExpanded">
+              <ng-container *ngIf="menuItem.subItems">
+                <a mat-list-item *ngFor="let subItem of menuItem.subItems">
+                  <span class="white-text dropdown-item">{{ subItem.label }}</span>
+                </a>
+              </ng-container>
+              <!-- Subsubmenús -->
+              <ng-container *ngIf="menuItem.subItems && menuItem.expanded">
+                <ng-container *ngFor="let subItem of menuItem.subItems">
+                  <div style="background-color: #711b57;" class="submenu" [ngClass]="{'expanded' : subItem.expanded}" *ngIf="isShowing || isExpanded">
+                    <ng-container *ngIf="subItem.subSubItems">
+                      <a mat-list-item *ngFor="let subSubItem of subItem.subSubItems">
+                        <span class="white-text dropdown-item">{{ subSubItem.label }}</span>
+                      </a>
+                    </ng-container>
+                  </div>
+                </ng-container>
+              </ng-container>
+            </div>
+          </ng-container>
+        </mat-nav-list>
+      </mat-sidenav>
+      <mat-sidenav-content class="mat-drawer-content mat-sidenav-content ng-star-inserted">
+      </mat-sidenav-content>
+    </mat-sidenav-container>
+  </div>
+</main>
